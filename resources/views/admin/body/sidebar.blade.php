@@ -47,15 +47,14 @@
                     </g>
                 </svg>
             </span>
-            <span class="app-brand-text demo menu-text fw-bolder ms-2">Sneat</span>
+        <span class="app-brand-text demo menu-text fw-bolder ms-3">Admin</span>
         </a>
-
+        <br><br>
         <a href="javascript:void(0);"
             class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
             <i class="bx bx-chevron-left bx-sm align-middle"></i>
         </a>
     </div>
-
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
@@ -71,13 +70,16 @@
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Layouts">Layouts</div>
+                <div data-i18n="Layouts">Category</div>
             </a>
 
             <ul class="menu-sub">
                 <li class="menu-item">
+                    <a href="{{ route('all.category') }}" class="menu-link">
+                        <div data-i18n="Without menu">All Category</div>
+                    </a>
                     <a href="layouts-without-menu.html" class="menu-link">
-                        <div data-i18n="Without menu">Without menu</div>
+                        <div data-i18n="Without menu">Add Category</div>
                     </a>
                 </li>
             </ul>

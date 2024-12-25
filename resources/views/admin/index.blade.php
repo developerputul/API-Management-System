@@ -6,7 +6,7 @@
    
     <div class="row">
         <!-- Order Statistics -->
-        <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+        <div class="col-md-6 col-lg-12 col-xl-12 order-0 mb-6">
             <div class="card h-100">
                 <div class="card-header d-flex align-items-center justify-content-between pb-0">
                     <div class="card-title mb-0">
@@ -105,7 +105,7 @@
         </div>
         <!--/ Order Statistics -->
 
-        <!-- Expense Overview -->
+        {{-- <!-- Expense Overview -->
         <div class="col-md-6 col-lg-4 order-1 mb-4">
             <div class="card h-100">
                 <div class="card-header">
@@ -289,7 +289,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!--/ Transactions -->
     </div>
 </div>

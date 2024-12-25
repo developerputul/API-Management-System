@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -8,8 +9,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin/dashboard', function () {
-    return view('admin/admin_dashboard');
+Route::get('/dashboard', function () {
+    return view('/dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -20,10 +21,17 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+
+//Admin All Route//
 Route::middleware(['auth',])->group(function(){
 
     Route::get('/admin/dashboard',[AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
     Route::get('/admin/logout',[AdminController::class, 'AdminLogout'])->name('admin.logout');
+
+    //Category All Route
+    Route::get('/all/category',[CategoryController::class,'AllCategory'])->name('all.category');
+    Route::get('/add/category',[CategoryController::class,'AddCategory'])->name('add.category');
+    Route::post('/category/store',[CategoryController::class,'CategoryStore'])->name('category.store');
 
 }); //End Admin All Group Route
 
